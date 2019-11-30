@@ -6,19 +6,6 @@
 void dprintf(const char *fmt, ...) {
 	va_list ap;
 	const char *p;
-	unsigned char i, cnt = 0;
-
-	// Count %s
-	for (p = fmt; *p; ++p) {
-		if (*p == '%') {
-			if (*(p+1) == '%') {
-				++p;
-			}
-			else {
-				++cnt;
-			}
-		}
-	}
 
 	va_start(ap, fmt);
 
