@@ -5,7 +5,7 @@
 
 #include "playfield.h"
 #include "playtiles.h"
-#include "cursor.h"
+#include "libreidx_sprites.h"
 
 #define released(k) (pkeys & k) && !(keys & k)
 
@@ -68,7 +68,7 @@ int main(void)
     PRC_MODE = COPY_ENABLE|SPRITE_ENABLE|MAP_ENABLE|MAP_24X16;
     PRC_RATE = RATE_36FPS;
     PRC_MAP = playtiles1;
-    PRC_SPR = cursor_sprite;
+    PRC_SPR = libreidx_sprites1;
     map1 = (uint16_t)playtiles1;
     map2 = (uint16_t)playtiles2;
 
