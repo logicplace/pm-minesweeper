@@ -150,9 +150,9 @@ void flag(uint8_t x, uint8_t y) {
 
 	pos = y * field.width + x;
 	field.field[pos] += FLAG;
-	if (!(field.field[pos] ^ MARK)) {
+	if ((field.field[pos] & MARK) == MARK) {
 		// only two marks, so make 3rd be 0
-		field.field[pos] ^= MARK;
+		field.field[pos] = 0;
 	}
 }
 

@@ -54,7 +54,7 @@ void scroll_to(oam_sprite_t *cursor, uint8_t x, uint8_t y) {
         vsync();
     }
 
-    cursor->x = xp - PRC_SCROLL_X + 16;
+    cursor->x = xp - PRC_SCROLL_X + 15;
     cursor->y = yp - PRC_SCROLL_Y + 24;
     cursor->ctrl |= OAM_ENABLE;
 }
@@ -91,7 +91,7 @@ int main(void)
     }
 
     x = y = new_x = new_y = 0;
-    cursor->x = 16;
+    cursor->x = 15;
     cursor->y = 24;
     cursor->tile = 0;
     cursor->ctrl = OAM_ENABLE;
